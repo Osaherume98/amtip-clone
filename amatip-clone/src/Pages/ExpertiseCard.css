@@ -1,0 +1,43 @@
+
+.expertise-card {
+  background: #fff;
+  padding: 40px;
+  text-align: left;
+}
+
+.expertise-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.expertise-icon {
+  width: 40px;
+  margin-bottom: 20px;
+}
+
+.expertise-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.expertise-card p {
+  font-size: 15px;
+  color: #666666;;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-family: "Roboto", Sans-serif;
+}
+
+.learn-more {
+  color: #de4e23;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.la-expertise-image {
+  width: 40px;
+  margin-bottom: 40px;
+}

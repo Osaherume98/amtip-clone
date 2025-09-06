@@ -1,0 +1,28 @@
+.core-offerings {
+  position: relative;
+  width: 100%;
+  height: 200px; 
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -65px;
+}
+
+.core-offerings .overlay {
+  text-align: center;
+  color: #fff;
+}
+
+.core-offerings h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.core-offerings .underline {
+  width: 80px;
+  height: 4px;
+  background-color: #fff; 
+  margin: 0 auto;
+  border-radius: 2px;
+}
