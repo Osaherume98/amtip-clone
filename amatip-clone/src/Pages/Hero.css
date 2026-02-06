@@ -1,0 +1,298 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 8% 50px 8%;
+  color: white;
+  min-height: 100vh;
+  background-image: url('../assets/pexels-pavel-danilyuk.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  overflow: hidden; 
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero-right {
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+  z-index: 3;
+  padding: 0 2rem;
+}
+
+.subheading {
+  color: #DE4E23;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  margin: 0 0 10px 0;
+}
+
+.main-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 74px;
+  margin: 0 0 30px 0;
+  word-wrap: break-word;
+}
+
+.description {
+  font-family: "Roboto", sans-serif;
+  line-height: 30px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 800px;
+}
+
+.button-group {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+
+.btn {
+  padding: 20px 24px;
+  border: none;
+  min-width: 200px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  background-color: #DE4E23;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 100px 10% 60px 10%;
+  }
+  
+  .main-heading {
+    font-size: 72px;
+    line-height: 82px;
+  }
+  
+  .description {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  
+  .button-group {
+    gap: 3rem;
+  }
+}
+
+/* Desktop and Large Tablet */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero {
+    padding: 80px 6% 50px 6%;
+  }
+  
+  .main-heading {
+    font-size: 56px;
+    line-height: 66px;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) and (min-width: 769px) {
+  .hero {
+    padding: 60px 4% 40px 4%;
+    text-align: center;
+  }
+  
+  .hero-right {
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .main-heading {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 auto 30px auto;
+  }
+  
+  .button-group {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 4% 30px 4%;
+    text-align: center;
+    min-height: 100vh;
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+  
+  .hero-right {
+    text-align: center;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .subheading {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  
+  .main-heading {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0 auto 25px auto;
+    max-width: 100%;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 3% 25px 3%;
+    min-height: 100vh;
+  }
+  
+  .hero-right {
+    padding: 0;
+  }
+  
+  .subheading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .main-heading {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    gap: 0.8rem;
+  }
+  
+  .btn {
+    padding: 14px 16px;
+    font-size: 13px;
+    max-width: 250px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 375px) {
+  .hero {
+    padding: 10px 2% 20px 2%;
+  }
+  
+  .hero-right {
+    padding: 30px 0 0 0;
+  }
+  
+  .main-heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .btn {
+    padding: 12px 14px;
+    font-size: 12px;
+    max-width: 200px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 320px) {
+  .hero {
+    padding: 20px 2% 15px 2%;
+  }
+  
+  .main-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .subheading {
+    font-size: 14px;
+  }
+  
+  .description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .btn {
+    padding: 10px 12px;
+    font-size: 11px;
+    max-width: 200px;
+  }
+}

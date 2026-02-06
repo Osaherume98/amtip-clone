@@ -1,0 +1,309 @@
+.signup-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #be185d 100%), url('../assets/rubidium-beach.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+  body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .signup-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #be185d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.2;
+            mix-blend-mode: multiply;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .bg-orb-1 {
+            top: -160px;
+            right: -128px;
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #60a5fa, #a855f7);
+        }
+
+        .bg-orb-2 {
+            bottom: -128px;
+            left: -160px;
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #f472b6, #ef4444);
+            animation-delay: 2s;
+        }
+
+        .bg-orb-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #34d399, #3b82f6);
+            animation-delay: 4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.05); }
+        }
+
+        .signup-card {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(32px);
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+            border-radius: 24px;
+            pointer-events: none;
+        }
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .signup-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .signup-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s ease;
+            z-index: 2;
+            width: 20px;
+            height: 20px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: transparent;
+            box-shadow: 0 0 0 2px #60a5fa;
+        }
+
+        .form-input:focus + .input-icon,
+        .input-container:focus-within .input-icon {
+            color: white;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s ease;
+            z-index: 2;
+            width: 20px;
+            height: 20px;
+        }
+
+        .password-toggle:hover {
+            color: white;
+        }
+
+        .error-message {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f87171;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .error-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: scale(1.02);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .signup-footer {
+            text-align: center;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-link {
+            color: #60a5fa;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #93c5fd;
+        }
+
+        .terms-text {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.75rem;
+            margin-top: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .terms-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .terms-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 640px) {
+            .signup-container {
+                padding: 0.5rem;
+            }
+            
+            .signup-card {
+                padding: 1.5rem;
+            }
+            
+            .signup-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
